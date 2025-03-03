@@ -38,12 +38,12 @@ export async function buildExecutor(
   try {
     runBuild(normalizedConfigs, normalizedOptions, context);
 
-    logger.log('✅ Successfully built design tokens');
+    logger.info('NX ✅ Successfully built design tokens');
     return {
       success: true,
     };
   } catch (error) {
-    logger.error('❌ Error building design tokens');
+    logger.error('NX ❌ Error building design tokens');
     logger.error(error);
     return {
       success: false,
